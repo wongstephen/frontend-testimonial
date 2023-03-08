@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+main {
+  display: grid;
+  margin: 2rem;
+  gap: 2rem;
+  grid-auto-flow: dense;
+  max-width: 1280px;
+  min-width: 300px;
+}
+
+div.testimonial {
+  padding: 2rem;
+  border-radius: 0.8rem;
+}
+div.testimonial:nth-child(1) {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top 0 right 10%;
+}
+div.testimonial:nth-child(2) {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+div.testimonial:nth-child(3) {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+}
+div.testimonial:nth-child(4) {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+div.testimonial:nth-child(5) {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+}
+
+@media screen and (min-width: 650px) {
+  div.testimonial:nth-child(1) {
+    grid-column: span 2;
+    background-position: top 0 right 15%;
+  }
+  div.testimonial:nth-child(4) {
+    grid-column: span 2;
+  }
+  div.testimonial:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+@media screen and (min-width: 850px) {
+  div.testimonial:nth-child(5) {
+    grid-column: span 3;
+  }
+}
+@media screen and (min-width: 1280px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  div.testimonial:nth-child(4) {
+    grid-area: 2 / 2 / 3 / span 2;
+  }
+  div.testimonial:nth-child(5) {
+    grid-area: 1 / 4 / span 2 / 5;
+  }
+}
+.profile-img {
+  border-radius: 100%;
+  width: 2.6rem;
+  height: auto;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+img.profile-img.patrick {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+div.profile-heading {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1.25rem;
+}
+.profile-heading-name {
+  font-size: 1.2rem;
+}
+.profile-heading-status {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+h1.profile-quote {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.light-gray {
+  color: hsl(217, 19%, 35%);
+}
+p.profile-quote {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+p.profile-quote:first-of-type,
+p.profile-quote:nth-of-type(2),
+.half-opacity {
+  opacity: 0.5;
+}
