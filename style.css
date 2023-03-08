@@ -21,9 +21,9 @@ main {
   gap: 2rem;
   grid-auto-flow: dense;
   max-width: 1280px;
-  min-width: 300px;
 }
 
+/* grid */
 div.testimonial {
   padding: 2rem;
   border-radius: 0.8rem;
@@ -51,7 +51,6 @@ div.testimonial:nth-child(5) {
   background-color: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 0%);
 }
-
 @media screen and (min-width: 650px) {
   div.testimonial:nth-child(1) {
     grid-column: span 2;
@@ -80,7 +79,9 @@ div.testimonial:nth-child(5) {
     grid-area: 1 / 4 / span 2 / 5;
   }
 }
-.profile-img {
+
+/* profile card */
+img.profile-img {
   border-radius: 100%;
   width: 2.6rem;
   height: auto;
@@ -89,7 +90,6 @@ div.testimonial:nth-child(5) {
 img.profile-img.patrick {
   border: 2px solid hsl(263, 55%, 52%);
 }
-
 div.profile-heading {
   display: flex;
   width: 100%;
@@ -112,6 +112,7 @@ h1.profile-quote {
   color: hsl(217, 19%, 35%);
 }
 p.profile-quote {
+  line-height: 1.4;
   margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: 500;
